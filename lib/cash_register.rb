@@ -38,7 +38,6 @@ class CashRegister
       self.prices.pop
       self.items.pop
     end
-
   end
   
 end
