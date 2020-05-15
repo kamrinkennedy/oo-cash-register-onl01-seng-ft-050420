@@ -28,7 +28,7 @@ class CashRegister
   
   def void_last_transaction
     self.total -= self.prices.pop
-    self.total.to_f
+    self.items == [] ? self.total = 0.0 : self.total
   end
   
 end
