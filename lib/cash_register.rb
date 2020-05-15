@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister
   
   attr_accessor :total, :discount, :items, :prices
@@ -37,6 +39,8 @@ class CashRegister
       self.prices.pop
       self.items.pop
     # end
+    binding.pry
   end
+  
   
 end
