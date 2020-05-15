@@ -9,11 +9,11 @@ class CashRegister
     self.discount = discount
     self.items = []
     self.prices = []
-    self.total = 0
+    self.total = prices.sum
   end
   
   def add_item(name, price, quantity = 1)
-    self.total += price * quantity
+    # self.total += price * quantity
     quantity.times do 
       self.items << name
     end
@@ -30,10 +30,9 @@ class CashRegister
   end
   
   def void_last_transaction
-    self.total -= self.prices[-1]
+    # self.total -= self.prices[-1]
     self.prices.pop
     self.total
   end
-  
-  
+
 end
