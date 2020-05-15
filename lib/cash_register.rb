@@ -31,11 +31,12 @@ class CashRegister
   end
   
   def void_last_transaction
-    self.total -= prices[-1]
-    self.items.pop
-    self.prices.pop
     if self.prices.length == 0 
-      self.total = 0 
+      self.total = 0.0 
+    else
+      self.total -= prices[-1]
+      self.items.pop
+      self.prices.pop
     end
 
   end
