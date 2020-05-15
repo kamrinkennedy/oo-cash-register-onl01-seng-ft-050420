@@ -8,11 +8,11 @@ class CashRegister
   end
   
   def add_item(name, price, quantity = 1)
-    self.total += price.to_f * quantity
+    self.total += price * quantity
   end
   
   def apply_discount
-    self.total -= discount.to_f
+    self.total -= discount
     "After the discount, the total comes to $#{self.total}."
   end
   
