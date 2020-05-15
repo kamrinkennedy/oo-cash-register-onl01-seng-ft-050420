@@ -31,6 +31,9 @@ class CashRegister
     self.total -= prices[-1]
     self.items.pop
     self.prices.pop
+    if self.prices.length == 0 
+      self.total = 0 
+    end
   end
   
 end
