@@ -14,7 +14,10 @@ class CashRegister
     self.total += price * quantity
     quantity.times do 
       self.items << name
-      self.prices << price
+      # self.prices << price
+    end
+    if quantity > 1 
+      self.prices << price * quantity
     end
   end
   
