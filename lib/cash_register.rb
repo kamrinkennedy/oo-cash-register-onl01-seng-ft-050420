@@ -36,10 +36,10 @@ class CashRegister
     #   self.total = 0
     # else
       self.total -= self.prices[-1]
-      self.prices.pop
-      self.items.pop
+      # self.prices.pop
+      # self.items.pop
     # end
-    binding.pry
+    # binding.pry
   end
   
   
