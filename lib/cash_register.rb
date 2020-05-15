@@ -11,7 +11,7 @@ class CashRegister
     self.total += price * quantity
   end
   
-  def supply_discount
+  def apply_discount
     
   end
   
