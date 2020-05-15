@@ -37,6 +37,8 @@ class CashRegister
     # if self.prices.length == 0 
     #   self.total = 0 
     # end
+    prices.pop
+    items.pop
   end
   
 end
