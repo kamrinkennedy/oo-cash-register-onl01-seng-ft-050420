@@ -14,7 +14,6 @@ class CashRegister
     self.total += price * quantity
     quantity.times do 
       self.items << name
-      # self.prices << price
     end
     if quantity > 1 
       self.prices << price * quantity
@@ -31,13 +30,13 @@ class CashRegister
   end
   
   def void_last_transaction
-    if self.prices.length == 0 
-      self.total = 0
-    else
+    # if self.prices.length == 0 
+    #   self.total = 0
+    # else
       self.total -= self.prices[-1]
       self.prices.pop
       self.items.pop
-    end
+    # end
   end
   
 end
