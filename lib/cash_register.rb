@@ -2,7 +2,7 @@ class CashRegister
   
   attr_accessor :total, :discount, :last_transaction, :current_transaction
   
-  def initialize(discount = nil)
+  def initialize(discount = 0)
     self.total = 0
     self.discount = discount/10.to_f
   end
