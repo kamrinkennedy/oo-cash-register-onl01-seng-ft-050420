@@ -1,6 +1,6 @@
 class CashRegister
   
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :prices
   
   def initialize(discount = 0)
     self.total = 0
@@ -12,6 +12,7 @@ class CashRegister
     self.total += price * quantity
     quantity.times do 
       self.items << name
+      self.prices << price
     end
   end
   
@@ -22,6 +23,10 @@ class CashRegister
     self.total -= self.total*discount/100
     "After the discount, the total comes to $#{self.total}."
     end
+  end
+  
+  def void_last_transaction
+    self.total -= self.prices[pop]
   end
   
 end
