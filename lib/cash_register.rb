@@ -7,7 +7,7 @@ class CashRegister
     self.discount = discount
     self.items = []
     self.prices = []
-    self.total = 0.0
+    self.total = 0
   end
   
   def add_item(name, price, quantity = 1)
