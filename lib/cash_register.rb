@@ -7,7 +7,7 @@ class CashRegister
     self.discount = discount
     self.items = []
     self.prices = []
-    self.total = 0
+    self.total = self.prices.sum
   end
   
   def add_item(name, price, quantity = 1)
@@ -31,12 +31,12 @@ class CashRegister
   end
   
   def void_last_transaction
-    self.total -= prices[-1]
-    self.items.pop
-    self.prices.pop
-    if self.prices.length == 0 
-      self.total = 0 
-    end
+    # self.total -= prices[-1]
+    # self.items.pop
+    # self.prices.pop
+    # if self.prices.length == 0 
+    #   self.total = 0 
+    # end
   end
   
 end
